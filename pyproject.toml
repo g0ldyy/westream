@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "westream"
+version = "0.1.0"
+description = "just a simple xtream proxy"
+authors = ["Goldy <153996346+g0ldyy@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+uvicorn = "*"
+fastapi = "*"
+loguru = "*"
+mediaflow-proxy = "*"
+orjson = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
