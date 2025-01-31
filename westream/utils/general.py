@@ -2,6 +2,7 @@ import orjson
 import time
 
 from westream.utils.logger import logger
+from westream.utils.watcher import lock
 from westream.utils.models import accounts
 
 
@@ -25,8 +26,9 @@ def check_account(username: str, password: str):
     if exp_date is not None and time_now > exp_date:
         del accounts[username]
 
-        with open("data/accounts.json", "wb") as file:
-            file.write(orjson.dumps(accounts, option=orjson.OPT_INDENT_2))
+        with lock:
+            with open("data/accounts.json", "wb") as file:
+                file.write(orjson.dumps(accounts, option=orjson.OPT_INDENT_2))
 
         logger.info(f"{username}'s account expired ({time_now} > {exp_date})")
 

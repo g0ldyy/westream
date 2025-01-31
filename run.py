@@ -1,5 +1,6 @@
 import uvicorn
 
+import westream.utils.watcher
 from westream.utils.models import config
 
 if __name__ == "__main__":

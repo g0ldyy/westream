@@ -13,6 +13,8 @@ fastapi = "*"
 loguru = "*"
 mediaflow-proxy = "*"
 orjson = "*"
+aiohttp = "*"
+python-multipart = "*"
 
 
 [build-system]
