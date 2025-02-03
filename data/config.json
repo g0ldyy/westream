@@ -1,0 +1,6 @@
+{
+    "fastapi_host": "0.0.0.0",
+    "fastapi_port": 8000,
+    "fastapi_workers": 1,
+    "playlist_filename": "playlist_<USERNAME>.m3u"
+}

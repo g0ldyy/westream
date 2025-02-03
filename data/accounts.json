@@ -1,0 +1,19 @@
+{
+    "example_username": {
+        "password": "example_password",
+        "created_at": 1724152324,
+        "status": "Active",
+        "exp_date": null,
+        "max_connections": 999,
+        "source": {
+            "url": "xtream_url",
+            "username": "xtream_username",
+            "password": "xtream_password",
+            "message": "example_message"
+        },
+        "proxy": {
+            "enabled": true,
+            "except_streams": false
+        }
+    }
+}
