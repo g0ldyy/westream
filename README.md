@@ -17,3 +17,6 @@ Under development. Check out the `data` folder and modify the configuration file
     ```sh
     poetry run python run.py
     ````
+
+# To Do
+- Automatic config setup system with integrity check via Pydantic
