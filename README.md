@@ -20,3 +20,4 @@ Under development. Check out the `data` folder and modify the configuration file
 
 # To Do
 - Automatic config setup system with integrity check via Pydantic
+- Filter system for regex-based control of xtream catalog content
