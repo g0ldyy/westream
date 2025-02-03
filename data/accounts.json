@@ -14,5 +14,21 @@
             "enabled": true,
             "except_streams": false
         }
+    },
+    "example_username2": {
+        "password": "example_password2",
+        "created_at": 1724152324,
+        "status": "Active",
+        "exp_date": null,
+        "source": {
+            "url": "xtream_url",
+            "username": "xtream_username",
+            "password": "xtream_password",
+            "message": "example_message"
+        },
+        "proxy": {
+            "enabled": true,
+            "except_streams": false
+        }
     }
 }
