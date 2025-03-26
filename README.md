@@ -10,12 +10,12 @@ Under development. Check out the `data` folder and modify the configuration file
     ```
 - Install dependencies
     ```sh
-    pip install poetry
-    poetry install
+    pip install uv
+    uv sync
     ````
 - Start WeStream
     ```sh
-    poetry run python run.py
+    uv run python run.py
     ````
 
 # To Do

@@ -1,22 +1,13 @@
-[tool.poetry]
+[project]
 name = "westream"
 version = "0.1.0"
-description = "just a simple xtream proxy"
-authors = ["Goldy <153996346+g0ldyy@users.noreply.github.com>"]
-license = "MIT"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = ">=3.9"
-uvicorn = "*"
-fastapi = "*"
-loguru = "*"
-mediaflow-proxy = "*"
-orjson = "*"
-aiohttp = "*"
-python-multipart = "*"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.11.14",
+    "fastapi>=0.115.6",
+    "loguru>=0.7.3",
+    "mediaflow-proxy>=1.9.7",
+    "orjson>=3.10.16",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.32.1",
+]
