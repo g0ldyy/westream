@@ -248,6 +248,21 @@ async def live(request: Request, username: str, password: str, filename: str):
     return await handle_streaming(request, username, download_url)
 
 
+@app.get("/timeshift/{username}/{password}/{duration}/{start}/{filename}")
+async def live(request: Request, username: str, password: str, duration: str, start: str, filename: str):
+    valid, user_data, source, proxy = check_account(username, password)
+    if not valid:
+        return
+
+    download_url = (
+        f"{source['url']}/timeshift/{source['username']}/{source['password']}/{duration}/{start}/{filename}"
+    )
+    if not proxy["enabled"] or (proxy["enabled"] and proxy["except_streams"]):
+        return RedirectResponse(download_url)
+
+    return await handle_streaming(request, username, download_url)
+
+
 @app.get("/hlsr/{token}/{username}/{password}/{id1}/{id2}/{filename}")
 async def hlsr(
     request: Request,
